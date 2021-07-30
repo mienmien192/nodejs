@@ -1,0 +1,19 @@
+1. npm init -y
+2. chạy chương trình mỗi lần: npm start = node server start
+3. npm install --save-dev nodemon 
+nếu lỗi : window powershell > run as administrator >
+    Get-ExecutionPolicy
+    Set-ExecutionPolicy Urestrict
+4. Chạy ctrinh 1 lần duy nhất: nodemon server
+5. npm install express ejs 
+6. npm install mongoose -save
+
+##ghi đè phương thức và cài đặt biến môi trường:
+1. npm install methods-override
+2. npm install dotenv
+nhớ require('dotenv').config() (server.js)
+Mục đích tạo các biến môi trường trong file .env:
+ bảo mật dữ liệu và dễ thay đổi khi up lên host
+ ( vd thay đổi database, thay đổi port...)
+app.listen(process.env.PORT||3000) =>
+ nghĩa là khi k có biến PORT trong .env, nó mặc định 3000
